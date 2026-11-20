@@ -12,12 +12,12 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
-// Runs before paint so the saved theme (light by default) never flashes.
-const themeScript = "try{const t=localStorage.getItem('ti_theme2');if(t)document.documentElement.dataset.theme=t}catch(e){}";
+// Runs before paint so the saved theme (dark by default) never flashes.
+const themeScript = "try{if('scrollRestoration' in history)history.scrollRestoration='manual'}catch(e){}window.scrollTo(0,0);try{const t=localStorage.getItem('ti_theme3');if(t)document.documentElement.dataset.theme=t}catch(e){}";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" data-theme="light" suppressHydrationWarning>
+    <html lang="en" data-theme="dark" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />

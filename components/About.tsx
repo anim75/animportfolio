@@ -6,7 +6,6 @@ export default function About() {
     <div className="about">
       <div className="aframe rv"><div className="orbx"></div><div className="aphoto" id="aphoto"><img src="/assets/about-office.jpg" alt="Tanjim Imtial at work" /></div></div>
       <div className="bio">
-        <span className="eyebrow rv"><b></b>01 · Who I am</span>
         <h2 className="h2 split">Who <span className="gtext">I Am</span></h2>
         <p className="rv">I'm <b>Tanjim Imtial</b>, a Computer Science graduate from <b>North South University</b> and currently a Product Manager at <b>Edison Group</b>. I'm driven by the challenge of building digital products that are useful, intuitive, and worth coming back to.</p>
         <p className="rv">With 3+ years of experience spanning product discovery, strategy, roadmap planning, launches, growth, and monetization, I bridge the gap between business goals, technology, and customer needs. I've also had the opportunity to work alongside leading telecom giants, including <b>GP, BL, and Robi</b>.</p>

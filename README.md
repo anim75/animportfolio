@@ -1,7 +1,7 @@
 # Tanjim Imtial — Portfolio (Next.js)
 
 Product Manager · Growth Strategist · AI Engineer.
-Next.js 15 (App Router) + React 19 + TypeScript. No UI library: all styling is in `app/globals.css`.
+Next.js 16 (App Router) + React 19 + TypeScript. No UI library: all styling is in `app/globals.css`.
 
 ## Run it
 
@@ -78,6 +78,6 @@ Only the name, date and product name should be stored publicly; keep industry an
 
 ## Notes
 
-- Theme: light by default, the toggle stores the choice in `localStorage` (`ti_theme2`).
+- Theme: dark by default, the toggle stores the choice in `localStorage` (`ti_theme3`).
 - Brand logos use Google's favicon service and load on the live domain.
 - The QuizMuiz video is not included yet (it's on Facebook). Add the file to `public/assets/videos/` and a line in `VIDEOS`.

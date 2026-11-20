@@ -1,7 +1,7 @@
 export default function SiteChrome() {
   return (
     <>
-<div id="loader"><div className="ld"><div className="ln"><span className="gtext">Tanjim Imtial</span></div><div className="lc"><span id="lcount">0</span>% — LOADING PRODUCT OS</div><div className="lb"><i id="lbar"></i></div></div></div>
+<div id="loader"><div className="ld"><div className="ln"><span className="gtext">Tanjim Imtial</span></div><div className="lc"><span id="lcount">0</span>% · PRODUCT MANAGER</div><div className="lb"><i id="lbar"></i></div></div></div>
 <div id="prog"></div><div id="cur"></div><div id="curd"></div><div id="glow"></div><div id="toast"></div>
 <svg width="0" height="0" style={{"position": "absolute"}}><defs><linearGradient id="og" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stopColor="#4796e3" /><stop offset=".5" stopColor="#9177c7" /><stop offset="1" stopColor="#ca6673" /></linearGradient><linearGradient id="xpg" x1="0" x2="1"><stop offset="0" stopColor="#4796e3" /><stop offset=".5" stopColor="#9177c7" /><stop offset="1" stopColor="#f5b14c" /></linearGradient></defs></svg>
 
@@ -28,16 +28,18 @@ export default function SiteChrome() {
   </div>
   <div className="nr">
     <button className="tog" id="tog" aria-label="Switch colour theme"><svg className="moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" /></svg><svg className="sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.5" /><g stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" /></g></svg></button>
-    <button className="btn btn-glow btn-hire mag" data-cv=""><span>✦</span><span className="t">Hire Me</span></button>
+    <button className="btn btn-glow btn-hire mag" data-cv="" aria-label="Hire Me, view CV"><span><span className="cvemo" aria-hidden="true">🎓</span></span><span className="t">Hire Me</span></button>
     <button className="burger" id="burger" aria-label="Menu"><i></i><i></i><i></i></button>
   </div>
 </nav>
-<div id="mnav">
-  <div className="grp"><small>WHO</small><div><a href="#hero">Home</a><a href="#about">About</a><a href="#experience">Experience</a></div></div>
-  <div className="grp"><small>HOW</small><div><a href="#flow">PM loop</a><a href="#how">How I work</a><a href="#tools">Toolkit</a></div></div>
-  <div className="grp"><small>WORK</small><div><a href="#products">Products</a><a href="#showcase">Showcase</a><a href="#games">Games</a><a href="#indev">Next</a><a href="#metrics">Impact</a><a href="#with">Brands</a></div></div>
-  <div className="grp"><small>YOU</small><div><a href="#ideas">Idea Lab</a><a href="#contact">Contact</a></div></div>
-</div>
+<div id="mnavbg"></div>
+<aside id="mnav" aria-label="Menu">
+  <div className="grp"><small>Who</small><div><a href="#hero"><span className="ic">🏠</span>Home</a><a href="#about"><span className="ic">👋</span>About</a><a href="#metrics"><span className="ic">📈</span>Impact</a><a href="#experience"><span className="ic">💼</span>Experience</a></div></div>
+  <div className="grp"><small>How</small><div><a href="#tools"><span className="ic">🧰</span>Toolkit</a><a href="#flow"><span className="ic">🔁</span>How a PM works</a><a href="#how"><span className="ic">🧭</span>How I work</a></div></div>
+  <div className="grp"><small>Work</small><div><a href="#products"><span className="ic">🚀</span>Products</a><a href="#showcase"><span className="ic">🎬</span>Showcase</a><a href="#games"><span className="ic">🎮</span>Games</a><a href="#indev"><span className="ic">🛠️</span>Building next</a><a href="#with"><span className="ic">🤝</span>Brands</a></div></div>
+  <div className="grp"><small>You</small><div><a href="#ideas"><span className="ic">💡</span>Idea Lab</a><a href="#contact"><span className="ic">✉️</span>Contact</a></div></div>
+  <div className="mfoot"><button className="btn btn-solid" data-cv=""><span className="cvemo" aria-hidden="true">🎓</span> Hire Me</button><button className="btn btn-ghost" data-cv="">View CV ↗</button></div>
+</aside>
     </>
   );
 }

@@ -4,7 +4,7 @@ export default function Contact() {
 <section id="contact">
   <div className="wrap">
     <div className="cta-big rv">
-      <span className="eyebrow"><b></b>Get In Touch</span>
+      
       <h2 style={{"marginTop": "22px"}}>Let's Build<br /><span className="gtext">Something Remarkable</span></h2>
       <p>Whether it's a product strategy, AI automation, or growth system — I'm ready to turn your idea into impact. Open to product roles, consulting, and collaboration.</p>
       <div className="ctas"><a href="#cform" className="btn btn-glow mag">Send Me a Message <span className="ar">→</span></a><button className="btn btn-ghost mag" data-cv="">View CV <span className="ar">↗</span></button></div>
@@ -33,6 +33,8 @@ export default function Contact() {
     </div>
   </div>
 </section>
+
+<button id="upbtn" aria-label="Back to top"><svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7" /></svg></button>
     </>
   );
 }

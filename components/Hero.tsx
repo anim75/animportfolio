@@ -4,8 +4,7 @@ export default function Hero() {
 <section id="hero">
   <div className="wrap hstage">
     <div className="hleft">
-      <span className="badge rv"><span className="dot"></span>Available for new opportunities</span>
-      <p className="hi rv d1">hey, I'm</p>
+            <p className="hi rv d1">hey, I'm</p>
       <h1 className="hname split" id="heroH">Tanjim <span className="gtext">Imtial</span></h1>
       <div className="roles3 rv d2"><i></i><span className="rotw" id="rotw"><span className="on">Product Manager</span><span>Growth Strategist</span><span>AI Engineer</span></span></div>
       <div className="ctas rv d3"><a href="#products" className="btn btn-solid mag"><span className="shine"></span>See my work <span className="ar">→</span></a><button className="btn btn-ghost mag" data-cv="">View CV <span className="ar">↗</span></button></div>

@@ -3,7 +3,7 @@ export default function Experience() {
     <>
 <section id="experience">
   <div className="wrap">
-    <div className="shead"><span className="eyebrow rv"><b></b>03 · What I do</span><h2 className="h2 split">What I <span className="gtext">do</span>.</h2><p className="lead rv">3+ years building and scaling digital products across telecom, AI, and software.</p></div>
+    <div className="shead"><h2 className="h2 split">What I <span className="gtext">do</span>.</h2><p className="lead rv">3+ years building and scaling digital products across telecom, AI, and software.</p></div>
     <div className="exp">
       <div className="tl" id="tl"><div className="line"><i id="tlfill"></i></div>
         <div className="job act rv"><div className="jt"><div><h4>Product Manager</h4><div className="co">MoMagic Bangladesh Ltd. · Edison Communication Ltd. — Edison Group</div></div><span className="act-b">● ACTIVE</span></div><div className="meta">JUL 2025 – PRESENT · DHAKA · FULL-TIME</div>

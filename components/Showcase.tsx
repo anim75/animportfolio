@@ -3,7 +3,7 @@ export default function Showcase() {
     <>
 <section id="showcase">
   <div className="wrap">
-    <div className="shead"><span className="eyebrow rv"><b></b>08 · See it in motion</span><h2 className="h2 split">Watch the <span className="gtext">products move</span>.</h2><p className="lead rv">Real walkthroughs and demos of the products I've shipped. Pick one, scrub, change speed or go fullscreen.</p></div>
+    <div className="shead"><h2 className="h2 split">Watch the <span className="gtext">products move</span>.</h2><p className="lead rv">Real walkthroughs and demos of the products I've shipped. Pick one, scrub, change speed or go fullscreen.</p></div>
     <div className="vp-wrap rv">
       <div className="vpo"><div className="vp" id="vp">
         <canvas id="vcan" width="1280" height="720"></canvas><video id="vvid" playsInline preload="metadata"></video>
