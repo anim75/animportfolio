@@ -928,7 +928,7 @@ nav.hide{transform:translateX(-50%)!important}
 .wtrack{overflow:hidden}
 .wbelt{display:flex;gap:14px;width:max-content;animation:wscroll 48s linear infinite;padding:6px 0}
 .wtrack.rev .wbelt{animation-duration:58s}
-.wwm:hover .wbelt{animation-play-state:paused}
+@media (hover:hover) and (pointer:fine){.wwm:hover .wbelt{animation-play-state:paused}}
 @keyframes wscroll{to{transform:translateX(-50%)}}
 .bcard{position:relative;flex:0 0 auto;width:178px;height:140px;border-radius:20px;border:1px solid var(--line);background:var(--card);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;padding:12px;opacity:0;transform:translateY(26px) scale(.86);transition:opacity .6s ease var(--d),transform .7s cubic-bezier(.3,1.5,.4,1) var(--d),border-color .3s,box-shadow .3s}
 .wwm.go .bcard{opacity:1;transform:none}
@@ -940,7 +940,6 @@ nav.hide{transform:translateX(-50%)!important}
 .bcard small{font-family:var(--mono);font-size:9.5px;color:var(--dim);letter-spacing:.16em;text-transform:uppercase}
 .bcard .kp{position:absolute;top:7px;right:10px;font-family:var(--hand);font-size:14px;color:var(--g3);transform:rotate(-6deg)}
 @media (max-width:680px){.wwm{margin:0 -4vw;gap:10px}.wbelt{gap:10px;animation-duration:38s}.wtrack.rev .wbelt{animation-duration:42s}.bcard{width:132px;height:112px;gap:6px;border-radius:16px}.bcard .blg{width:44px;height:44px;border-radius:13px;font-size:15px}.bcard b{font-size:11.5px}.bcard small{display:none}.bcard .kp{font-size:12px}}
-@media (prefers-reduced-motion:reduce){.wbelt{animation:none}.wtrack{overflow-x:auto}}
 .bcard .blg.img{width:124px!important;height:60px;border-radius:14px}
 .bcard .blg.img img{padding:6px 8px;width:100%!important;height:100%!important;object-fit:contain!important;object-position:center;transform:none!important}
 .bcard .blg:not(.img){width:60px;height:60px}
@@ -966,3 +965,5 @@ html,body{overscroll-behavior-x:none}
 #mnav .mfoot a.btn{display:inline-flex;font-family:var(--body);font-weight:600;border-radius:999px;transform:none}
 #mnav .mfoot a.btn-solid{color:var(--bg);background:var(--tx)}
 #mnav .mfoot a.btn-ghost{color:var(--tx)}
+.btn-hire{width:42px!important;height:42px!important;min-width:0!important;padding:0!important;justify-content:center!important;gap:0!important}.btn-hire .t{display:none!important}.btn-hire .cvemo{font-size:18px}
+@media (max-width:680px){.btn-hire{width:38px!important;height:38px!important}.btn-hire .cvemo{font-size:15px}}
