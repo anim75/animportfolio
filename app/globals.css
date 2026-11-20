@@ -963,3 +963,6 @@ nav.hide{transform:translateX(-50%)!important}
 html,body{overscroll-behavior-x:none}
 .xs{overscroll-behavior-x:contain}
 @media (max-width:680px){.xs{scroll-snap-type:x proximity}}
+#mnav .mfoot a.btn{display:inline-flex;font-family:var(--body);font-weight:600;border-radius:999px;transform:none}
+#mnav .mfoot a.btn-solid{color:var(--bg);background:var(--tx)}
+#mnav .mfoot a.btn-ghost{color:var(--tx)}

@@ -38,7 +38,7 @@ export default function SiteChrome() {
   <div className="grp"><small>How</small><div><a href="#tools"><span className="ic">🧰</span>Toolkit</a><a href="#flow"><span className="ic">🔁</span>How a PM works</a><a href="#how"><span className="ic">🧭</span>How I work</a></div></div>
   <div className="grp"><small>Work</small><div><a href="#products"><span className="ic">🚀</span>Products</a><a href="#showcase"><span className="ic">🎬</span>Showcase</a><a href="#games"><span className="ic">🎮</span>Games</a><a href="#indev"><span className="ic">🛠️</span>Building next</a><a href="#with"><span className="ic">🤝</span>Brands</a></div></div>
   <div className="grp"><small>You</small><div><a href="#ideas"><span className="ic">💡</span>Idea Lab</a><a href="#contact"><span className="ic">✉️</span>Contact</a></div></div>
-  <div className="mfoot"><button className="btn btn-solid" data-cv=""><span className="cvemo" aria-hidden="true">🎓</span> Hire Me</button><button className="btn btn-ghost" data-cv="">View CV ↗</button></div>
+  <div className="mfoot"><a href="#products" className="btn btn-solid">🚀 Products</a><a href="#about" className="btn btn-ghost">👋 About me</a></div>
 </aside>
     </>
   );
