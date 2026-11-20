@@ -7,9 +7,9 @@ export default function IdeaLab() {
     <div className="lab2">
       <form className="ibox rv" id="iform" autoComplete="off">
         <div className="ihead"><b>Pitch it <span className="gtext">fast</span></b><span className="pbar"><i id="pfill"></i></span><span className="ppct" id="ppct">0%</span><span className="prk" id="prk">🚀</span></div>
-        <div className="g2"><div className="f"><input id="inm" placeholder=" " maxLength="40" required /><label htmlFor="inm">Your name</label></div><div className="f"><input id="ipd" placeholder=" " maxLength="60" required /><label htmlFor="ipd">Product / service</label></div></div>
+        <div className="g2"><div className="f"><input id="inm" placeholder=" " maxLength={40} required /><label htmlFor="inm">Your name</label></div><div className="f"><input id="ipd" placeholder=" " maxLength={60} required /><label htmlFor="ipd">Product / service</label></div></div>
         <select id="iind" className="selfull" required aria-label="Industry"><option value="">Industry</option></select>
-        <div className="f"><textarea id="ipt" placeholder=" " maxLength="400" rows="2" required></textarea><label htmlFor="ipt">What problem does it solve? (main scope)</label></div>
+        <div className="f"><textarea id="ipt" placeholder=" " maxLength={400} rows={2} required></textarea><label htmlFor="ipt">What problem does it solve? (main scope)</label></div>
         <p className="inote2">🌍 <b>Could it change the world?</b> We'd love to develop it — and invest.</p>
         <button className="btn btn-glow launch mag" id="ilaunch" type="submit">Launch my idea <span className="rk">🚀</span></button>
         <div className="imode" id="imode"></div>
