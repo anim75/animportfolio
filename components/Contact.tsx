@@ -3,12 +3,6 @@ export default function Contact() {
     <>
 <section id="contact">
   <div className="wrap">
-    <div className="cta-big rv">
-      
-      <h2 style={{"marginTop": "22px"}}>Let's Build<br /><span className="gtext">Something Remarkable</span></h2>
-      <p>Whether it's a product strategy, AI automation, or growth system — I'm ready to turn your idea into impact. Open to product roles, consulting, and collaboration.</p>
-      <div className="ctas"><a href="#cform" className="btn btn-glow mag">Send Me a Message <span className="ar">→</span></a><button className="btn btn-ghost mag" data-cv="">View CV <span className="ar">↗</span></button></div>
-    </div>
     <div className="contact">
       <div className="cbox rv">
         <div className="me"><span className="hs"></span><div><b>Tanjim Imtial</b><small>Product Manager · MoMagic Bangladesh Ltd. · Edison Communication Ltd. — Edison Group</small></div></div>
