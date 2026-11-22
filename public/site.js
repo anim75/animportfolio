@@ -258,7 +258,7 @@ const VIDEOS=[
  const LK='ti_ideas_local';
  function loadLocal(){let a=[];try{a=JSON.parse(localStorage.getItem(LK)||'[]')}catch(e){}mine=new Map(a.map(x=>[x.key,x]));rows=a.map(x=>({key:x.key,n:x.nm,pd:x.pd,il:(x.ind||'').length,pl:x.pd.length,sl:(x.pt||'').length||12,ts:x.ts}));render()}
  (async()=>{loadLocal();$('#imode').textContent='Only your name appears on the board.';
-  if(!window.claude||!claude.use)return;
+  if(!window.claude||!claude.use){if(location.protocol==='file:')return;try{const r=await fetch('/api/ideas',{cache:'no-store'});if(r.ok){const j=await r.json();if(j&&Array.isArray(j.items)){mode='api';rows=j.items;render();$('#imode').textContent='Live board · every innovator stays here forever.'}}}catch(e){}return}
   try{const [d,u]=await Promise.all([claude.use('db'),claude.use('user')]);if(!d||!u)return;const id=await u.id();if(!id)return;let w=null;try{w=await u.can('data.write')}catch(e){}if(w===false)return;
    db=d;uid=id;mode='db';const me=await db.doc('ideas/'+uid).get();mine=new Map((me.exists?(me.data().items||[]):[]).map(x=>[x.key,x]));
    const to=setTimeout(()=>{$('#imode').textContent='The board is taking a while to load…'},10000);
@@ -269,6 +269,7 @@ const VIDEOS=[
   busy=true;const btn=$('#ilaunch');btn.disabled=true;btn.classList.add('go');const xp=score();const key=Date.now().toString(36)+Math.random().toString(36).slice(2,6),ts=Date.now();
   const full={key,nm,pd,ind,pt,ts},pub={key,n:nm,pd,il:ind.length,pl:pd.length,sl:pt.length,ts};
   try{if(mode==='db'){await db.doc('ideas/'+uid).set({items:[...mine.values(),full].slice(-20)});const bs=await db.doc('board/'+uid).get();await db.doc('board/'+uid).set({items:[...(bs.exists?(bs.data().items||[]):[]),pub].slice(-20)});mine.set(key,full)}
+   else if(mode==='api'){const r=await fetch('/api/ideas',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(full)});if(!r.ok)throw new Error('save');const j=await r.json();let a=[];try{a=JSON.parse(localStorage.getItem(LK)||'[]')}catch(e){}a.push(full);try{localStorage.setItem(LK,JSON.stringify(a.slice(-20)))}catch(e){}mine.set(key,full);rows=rows.concat([j.item||pub])}
    else{let a=[];try{a=JSON.parse(localStorage.getItem(LK)||'[]')}catch(e){}a.push(full);try{localStorage.setItem(LK,JSON.stringify(a.slice(-20)))}catch(e){}loadLocal()}}
   catch(err){busy=false;btn.disabled=false;btn.classList.remove('go');toast(err&&err.code==='quota_exceeded'?'The lab is full right now — try again later':'Couldn’t save your idea. Please try again.');return}
   const rank=(rows.findIndex(r=>r.key===key)+1)||rows.length;page=Math.floor((Math.max(1,rank)-1)/PER);render();celebrate(nm,pd,rank,xp);
