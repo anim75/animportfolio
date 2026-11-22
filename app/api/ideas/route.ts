@@ -57,6 +57,32 @@ export async function POST(req: Request) {
   } catch {
     return Response.json({ error: "save_failed" }, { status: 500 });
   }
+  // Mirror the submission to Google Sheets (Apps Script web app), if configured.
+  const hook = process.env.SHEET_WEBHOOK_URL;
+  if (hook) {
+    try {
+      const ctrl = new AbortController();
+      const t = setTimeout(() => ctrl.abort(), 8000);
+      await fetch(hook, {
+        method: "POST",
+        headers: { "content-type": "text/plain;charset=utf-8" },
+        body: JSON.stringify({
+          secret: process.env.SHEET_WEBHOOK_SECRET || "",
+          date: new Date(ts).toISOString(),
+          name: nm,
+          product: pd,
+          industry: ind,
+          problem: pt,
+          key,
+        }),
+        redirect: "follow",
+        signal: ctrl.signal,
+      });
+      clearTimeout(t);
+    } catch {
+      /* the idea is already saved; the sheet copy is best-effort */
+    }
+  }
   const item: Row = { key, ts, n: nm, pd, il: ind.length, sl: pt.length, pl: pd.length };
   return Response.json({ item });
 }
